@@ -1,0 +1,82 @@
+﻿@model EFCodeFirst2.Models.ITEM
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ITEM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CATEGORIA.CATEGORIA_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIA.CATEGORIA_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ORCAMENTO.ORCAMENTO_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ORCAMENTO.ORCAMENTO_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNIDADE_MEDIDA.UNIDADE_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNIDADE_MEDIDA.UNIDADE_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_QUANTIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_QUANTIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_VALOR_UNITARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_VALOR_UNITARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_VALOR_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_VALOR_TOTAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_VALOR_SALDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_VALOR_SALDO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

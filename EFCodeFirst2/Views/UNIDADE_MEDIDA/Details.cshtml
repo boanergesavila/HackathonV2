@@ -1,0 +1,34 @@
+﻿@model EFCodeFirst2.Models.UNIDADE_MEDIDA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>UNIDADE_MEDIDA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UNIDADE_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNIDADE_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UNIDADE_SIGLA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UNIDADE_SIGLA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EFCodeFirst2.Models.ITEM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CATEGORIA.CATEGORIA_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ORCAMENTO.ORCAMENTO_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UNIDADE_MEDIDA.UNIDADE_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEM_NOME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEM_QUANTIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEM_VALOR_UNITARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEM_VALOR_TOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ITEM_VALOR_SALDO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CATEGORIA.CATEGORIA_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ORCAMENTO.ORCAMENTO_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UNIDADE_MEDIDA.UNIDADE_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEM_NOME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEM_QUANTIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEM_VALOR_UNITARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEM_VALOR_TOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ITEM_VALOR_SALDO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

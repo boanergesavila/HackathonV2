@@ -1,0 +1,58 @@
+﻿@model EFCodeFirst2.Models.ITEM_EXECUTADO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ITEM_EXECUTADO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM.ITEM_NOME)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM.ITEM_NOME)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_EXECUTADO_DATA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_EXECUTADO_DATA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_EXECUTADO_QUANTIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_EXECUTADO_QUANTIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_EXECUTADO_VALOR_UNITARIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_EXECUTADO_VALOR_UNITARIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ITEM_EXECUTADO_VALOR_TOTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ITEM_EXECUTADO_VALOR_TOTAL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
