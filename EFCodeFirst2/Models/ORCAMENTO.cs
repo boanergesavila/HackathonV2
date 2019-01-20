@@ -2,6 +2,7 @@ namespace EFCodeFirst2.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
@@ -21,6 +22,7 @@ namespace EFCodeFirst2.Models
 
         [Required]
         [StringLength(255)]
+        [DisplayName("Orçamento")]
         public string ORCAMENTO_NOME { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
